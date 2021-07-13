@@ -15,7 +15,8 @@ def hello():
 def index():
     #requestモジュールをインポートして、以下の文でクエリストリングを受け取ることが出来る
     name = request.args.get("name")
-    return render_template("index.html",name=name)
+    guzai = ["きゅうり","たまご","ハム","トマト"]
+    return render_template("index.html",name=name,guzai=guzai)
 
 #おまじない
 if __name__ == '__main__':
