@@ -1,5 +1,6 @@
 #flaskとrender_template(HTMLを表示させるための関数)をインポート
-from flask import Flask,render_template
+from flask import Flask,render_template,request
+#クエリストリングを受け取ってhtmlに送る
 
 #flaskオブジェクトの生成
 app = Flask(__name__)
@@ -12,7 +13,9 @@ def hello():
 #.[/index]へアクセスがあった場合に、「index.html」を返す
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    #requestモジュールをインポートして、以下の文でクエリストリングを受け取ることが出来る
+    name = request.args.get("name")
+    return render_template("index.html",name=name)
 
 #おまじない
 if __name__ == '__main__':
