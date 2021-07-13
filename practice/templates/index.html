@@ -4,7 +4,7 @@
         <title>{{name}}</title>
     </head>
     <body>
-        <name=tamutamuならば--*/
+        <!--name=tamutamuならば--!>
         {% if name == "tamutamu" %}
         <h1>アプリ開発はじめました^_-{{name}}</h1>
         {% elif name %}
@@ -12,6 +12,15 @@
         {% else %}
         <h1>はろおきてぃ</h1>
         {% endif %}
+        
+        <!--formタグのaction属性で、フォームに送信する対象のURLを指定--!>
+        <form action="/index" method="post">
+            <input type="text" name="name" placeholder="Enter name">
+            <input type="submit" value="Submit">
+        </form>
+
+
+
         <img src="/static/images/images.jpg" alt="かわいい">
         {% for word in guzai %}
         <p>{{word}}</p>

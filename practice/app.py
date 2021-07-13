@@ -18,6 +18,12 @@ def index():
     guzai = ["きゅうり","たまご","ハム","トマト"]
     return render_template("index.html",name=name,guzai=guzai)
 
+@app.route('/index',methods=["POST"])
+def post():
+    name=request.form["name"]
+    guzai = ["きゅうり","たまご","ハム","トマト"]
+    return render_template("index.html",name=name,guzai=guzai)
+
 #おまじない
 if __name__ == '__main__':
     app.run(debug=True)
