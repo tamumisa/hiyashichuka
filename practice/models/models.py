@@ -6,7 +6,7 @@
 #body(text:お願いの内容)
 #date(datetime:お願いの投稿日時)
 
-from sqlalchemy import Clumn,String,Text,DateTime
+from sqlalchemy import Column,Integer,String,Text,DateTime
 from models.database import Base
 from datetime import datetime
 
@@ -17,12 +17,12 @@ class Onegaicontent(Base):
     __tablename__ = "onegaicontents"
     id = Column(String(128),unique=True)
     body = Column(Text)
-    date = Column(Datetime,default=datetime.now()))
+    date = Column(Datetime,default=datetime.now())
 
     def __init__(self,title=None,body=None,date=None):
         self.title = title
         self.body = body
         self.date = date
 
-    def __repr__(self)
-    return '<Title %r' %(self.title)
+    def __repr__(self):
+        return '<Title %r>' %(self.title)
