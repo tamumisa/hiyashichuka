@@ -10,6 +10,12 @@ app = Flask(__name__)
 def hello():
     return "HELLO KITTY(=^・^=)"
 
+@app.route('/kitty2')
+def kitty2():
+    name = request.args.get("name")
+    guzai = ["きゅうり","たまご","ハム","トマト"]
+    return render_template("kitty2.html",name=name,guzai=guzai)
+
 #.[/index]へアクセスがあった場合に、「index.html」を返す
 @app.route('/index')
 def index():
