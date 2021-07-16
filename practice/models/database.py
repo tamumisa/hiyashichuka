@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session,sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import os
+import sqlite3
 
 #DBへの接続情報を定義している
 #①datebase.pyと同じパスに onegai.dbというファイルを絶対パスで定義

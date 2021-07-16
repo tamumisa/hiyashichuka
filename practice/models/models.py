@@ -9,6 +9,7 @@ from sqlalchemy import DateTime as dt
 from sqlalchemy import Column,Integer,String,Text
 from models.database import Base
 from datetime import datetime
+import sqlite3
 
 #カラム情報の定義を行う
 #テーブル名とカラム別にカラム名と方を使用しています
