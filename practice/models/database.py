@@ -20,4 +20,5 @@ Base.query = db_session.query_property()
 #DB初期化のための関数を定義
 def init_db():
     import models.models
-    Base.metadate.create_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
+    #Base.metadata.create_all(bind=engine,checkfirst=False)
